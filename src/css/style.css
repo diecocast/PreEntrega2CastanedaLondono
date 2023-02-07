@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    .navbar-collapse {
+        float: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
