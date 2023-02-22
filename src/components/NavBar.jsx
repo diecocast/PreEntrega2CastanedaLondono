@@ -1,35 +1,57 @@
-import React from 'react'
-import CartWidget from './CartWidget'
+import React from 'react';
+import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <div><nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">CastEcommerce</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <Link to="/" className="navbar-brand">CastEcommerce</Link>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <CartWidget/>
-        </li>
-      </ul>
-    </div>
-  </nav></div>
-  )
-}
+          <div className="dropdown">
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Menu</button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <Link to="/" className="nav-link"><button className="dropdown-item" type="button">Products</button></Link>
+            <Link to="/" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button className="dropdown-item" type="button">Categories</button>
+            </Link>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="list-unstyled">
+                  <li><Link to="/category/skincare" className="dropdown-item">Skincare</Link></li>
+                  <li><div className="dropdown-divider"></div></li>
+                  <li><Link to="/category/fragrances" className="dropdown-item">Fragrances</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-export default NavBar
+
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">Products</Link>
+            </li>
+            <li className="nav-item dropdown">
+              <Link to="/" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </Link>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="list-unstyled">
+                  <li><Link to="/category/skincare" className="dropdown-item">Skincare</Link></li>
+                  <li><div className="dropdown-divider"></div></li>
+                  <li><Link to="/category/fragrances" className="dropdown-item">Fragrances</Link></li>
+                </ul>
+              </div>
+            </li>
+            <li className="nav-item">
+              <CartWidget />
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+  );
+};
+
+export default NavBar;
