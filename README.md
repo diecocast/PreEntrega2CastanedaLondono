@@ -20,5 +20,5 @@ Para poder utilizar este proyecto, es necesario seguir los siguientes pasos:
 
 1. Clonar este repositorio en tu computadora.
 2. Instalar las dependencias utilizando `npm install`.
-3. Iniciar la aplicación utilizando `npm start`.
+3. Iniciar la aplicación utilizando `npm run dev`.
 
