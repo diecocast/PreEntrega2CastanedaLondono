@@ -1,3 +1,6 @@
+![Texto alternativo](cap.gif)
+
+
 # E-commerce con React
 
 Este proyecto es un ejemplo de cómo construir un e-commerce utilizando React como framework principal.
@@ -13,6 +16,7 @@ Este proyecto es un ejemplo de cómo construir un e-commerce utilizando React co
 - React como framework principal.
 - React Router para el sistema de ruteo.
 - Bootstrap para los estilos de la aplicación.
+- Sweetalert2 para el sistema de alertas
 
 ## Instalación
 
@@ -20,5 +24,5 @@ Para poder utilizar este proyecto, es necesario seguir los siguientes pasos:
 
 1. Clonar este repositorio en tu computadora.
 2. Instalar las dependencias utilizando `npm install`.
-3. Iniciar la aplicación utilizando `npm start`.
+3. Iniciar la aplicación utilizando `npm run dev`.
 

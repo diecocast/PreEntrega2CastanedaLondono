@@ -10,6 +10,7 @@ const Item = ({product}) => {
       <div className="product-card-content">
         <h2 className="product-card-title">{product.title}</h2>
         <h3 className="product-card-price">$ {product.price}</h3>
+        <p><b>Stock: </b>{product.stock}</p>
         <Link to={`/item/${product.id}`}><button type="button" className="btn btn-primary">Detalles</button></Link>
       </div>
     </div>
